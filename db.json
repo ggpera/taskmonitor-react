@@ -1,0 +1,74 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "name": "Imurointi",
+      "catId": [
+        2,
+        1
+      ],
+      "active": false,
+      "start": 0,
+      "time": 0
+    },
+    {
+      "id": 2,
+      "name": "Tiskaus",
+      "catId": [
+        1
+      ],
+      "time": 0,
+      "active": false,
+      "start": 0
+    },
+    {
+      "id": 3,
+      "name": "Koodaa perkele!",
+      "catId": [
+        2
+      ],
+      "time": 0,
+      "active": false,
+      "start": 0
+    },
+    {
+      "id": 4,
+      "name": "Kynsien leikkaus",
+      "catId": [
+        3
+      ],
+      "time": 0,
+      "active": false,
+      "start": 0
+    },
+    {
+      "id": 5,
+      "name": "Osta kissanruokaa",
+      "catId": [
+        3,
+        4
+      ],
+      "time": 0,
+      "active": false,
+      "start": 0
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "type": "Koti"
+    },
+    {
+      "id": 2,
+      "type": "Koulu"
+    },
+    {
+      "id": 3,
+      "type": "Kissa"
+    },
+    {
+      "id": 4,
+      "type": "Kauppa"
+    }
+  ]
+}

@@ -1,38 +1,269 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
+body {
+  background-color: #fbfff4;
+  font-family: Helvetica, Arial, sans-serif;
+  padding-bottom: 5rem;
+}
+.App-img {
+  margin: 2rem 0;
+  height: 20vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .App-img {
+    animation: App-img-zoom 4s linear infinite;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes App-img-zoom {
+  100% {
+    transform: scale(1.4);
   }
-  to {
+}
+.hidden {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.2rem;
+  border: 0.5rem solid #fbfff4;
+  border-radius: 50%;
+}
+.timer-spinner {
+  width: 2rem;
+  height: 2rem;
+  margin: 0.2rem;
+  border: 0.5rem solid #fbfff4;
+  border-top: 0.5rem solid #29e5af;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+.loading-spinner {
+  margin: auto;
+  margin-top: 12.5rem;
+  width: 3rem;
+  height: 3rem;
+  border: 0.5rem solid #e4e4e4;
+  border-top: 0.5rem solid #29e5af;
+  border-radius: 50%;
+  animation: spinner 1s linear infinite;
+}
+@keyframes spinner {
+  100% {
     transform: rotate(360deg);
   }
+}
+.main {
+  color: #3a3153;
+  font-weight: lighter;
+  text-decoration: underline dotted #3a3153 0.02rem;
+}
+
+.links {
+  background-color: #5f43b2;
+  padding: 1rem 0;
+}
+
+.trackerul {
+  list-style-type: none;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+}
+.editul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: auto;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+}
+
+a {
+  color: #fbfff4;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+a:hover {
+  text-decoration: underline #29e5af 0.25rem;
+}
+.info {
+  text-align: center;
+  background-color: #e4e4e4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 50%;
+  margin: auto;
+  margin-top: 1rem;
+}
+.center {
+  text-align: left;
+  width: 40%;
+  margin: auto;
+  margin-top: 1rem;
+}
+.middle {
+  text-align: left;
+  background-color: #e4e4e4;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 50%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.filter {
+  text-align: left;
+  border-radius: 0.5rem;
+  width: 50%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.type {
+  color: #010101;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+
+.edit {
+  background-color: #5f43b2;
+  color: #fefdfd;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.delete {
+  background-color: #5f43b2;
+  color: #fefdfd;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.add {
+  background-color: #5f43b2;
+  color: #fefdfd;
+  width: 50%;
+  text-align: center;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  font-size: 90%;
+  cursor: pointer;
+}
+
+.form {
+  background-color: #e4e4e4;
+  color: #010101;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.title {
+  text-decoration: underline dotted #010101 0.02rem;
+}
+.tasktitle {
+  margin-top: 0;
+  font-weight: lighter;
+  text-decoration: underline dotted #8e8d8a 0.02rem;
+}
+
+label {
+  display: block;
+  text-align: left;
+}
+input[type='checkbox'] {
+  transform: scale(1.5);
+  vertical-align: middle;
+  position: relative;
+  margin-right: 0.5rem;
+  bottom: 0.1rem;
+}
+
+input[type='text'] {
+  background-color: #fefdfd;
+  display: block;
+  text-align: left;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+input:focus {
+  outline: none;
+  border: 2px solid #5f43b2;
+}
+
+.catlist {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.catbutton {
+  background-color: #5f43b2;
+  color: #fefdfd;
+  width: 5rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  font-size: 90%;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #29e5af;
+  color: #010101;
+  width: 5rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  font-size: 90%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttons {
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.numbers {
+  padding: 0.3rem;
+}
+
+.watch {
+  background-color: #5f43b2;
+  color: #fefdfd;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin: 0.1rem;
+  cursor: pointer;
+}
+
+.bg2 {
+  text-align: left;
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
-import Tracker from './Tracker';
-import Info from './Info';
-import Tasks from './Tasks';
-import Categories from './Categories';
+import Tracker from './routes/Tracker';
+import Info from './routes/Info';
+import Tasks from './routes/Tasks';
+import Categories from './routes/Categories';
 
 class App extends React.Component {
   render() {

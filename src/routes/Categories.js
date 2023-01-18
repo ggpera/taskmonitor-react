@@ -1,5 +1,5 @@
 import React from 'react';
-import CategoryController from './Components/CategoryController';
+import CategoryController from '../components/CategoryController';
 
 class Categories extends React.Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import TaskController from './Components/TaskController';
+import TaskController from '../components/TaskController';
 
 class EditComponent extends React.Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import Timer from './Components/Timer';
+import Timer from '../components/Timer';
 
 class Tracker extends React.Component {
   constructor(props) {

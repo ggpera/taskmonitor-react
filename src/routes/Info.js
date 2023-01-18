@@ -1,5 +1,5 @@
 import React from 'react';
-import kis from './media/kis.png';
+import kis from '../media/kis.png';
 
 function InfoComponent() {
   return (

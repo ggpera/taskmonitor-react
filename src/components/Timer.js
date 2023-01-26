@@ -43,7 +43,7 @@ const Timer = (props) => {
   };
   const saveStop = (time) => {
     const active = false;
-    const start = 0;
+    const start = Date.now();
     props.stopCallback(start, time, active, props.id);
     console.log(time);
   };

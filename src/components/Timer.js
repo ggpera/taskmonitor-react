@@ -4,26 +4,31 @@ const Timer = (props) => {
   const [time, setTime] = useState(0);
   const [run, setRun] = useState(false);
   const [active, setActive] = useState(false);
+  const [isStartPressed, setStartPressed] = useState(false);
   useEffect(() => {
     let interval;
     let start;
     let running = props.active;
     let savedTime = props.time;
+    console.log(isStartPressed);
 
     if (running) {
       setRun(running);
       setActive(running);
       let now = Date.now();
       let startTime = props.start;
-      console.log(now);
-      console.log(startTime);
-      if (startTime <= now) {
-        start = now - startTime;
-        setTime(start);
-      } else {
+      if (isStartPressed) {
         start = savedTime;
         setTime(start);
+      } else if (savedTime !== 0) {
+        start = now - startTime + savedTime;
+        setTime(start);
+      } else {
+        start = now - startTime;
+        setTime(start);
       }
+    } else {
+      setTime(savedTime);
     }
 
     if (run) {
@@ -34,7 +39,7 @@ const Timer = (props) => {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
-  }, [props.active, props.start, props.time, run]);
+  }, [isStartPressed, props.active, props.start, props.time, run]);
 
   const saveStart = () => {
     const active = true;
@@ -52,6 +57,7 @@ const Timer = (props) => {
     setActive(false);
     setTime(0);
     saveStop(0);
+    setStartPressed(false);
   };
 
   return (
@@ -67,9 +73,12 @@ const Timer = (props) => {
         <button
           className='watch'
           onClick={() => {
-            setRun(true);
-            setActive(true);
-            saveStart();
+            if (!isStartPressed) {
+              setStartPressed(true);
+              setRun(true);
+              setActive(true);
+              saveStart();
+            }
           }}
         >
           Aktivoi
@@ -80,6 +89,7 @@ const Timer = (props) => {
             setRun(false);
             setActive(false);
             saveStop(time, active);
+            setStartPressed(false);
           }}
         >
           Pysäytä

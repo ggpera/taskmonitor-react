@@ -50,7 +50,6 @@ class Categories extends React.Component {
       return (
         <div>
           <div className='center'>
-            <br></br>
             <h1 className='main'>Kategoriat</h1>
           </div>
           <CategoryController

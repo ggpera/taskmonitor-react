@@ -25,6 +25,9 @@ class Tracker extends React.Component {
           this.setState({
             loading: false,
             tasks: jsonObject.concat(this.state.tasks),
+            filteredTasks: jsonObject.concat(this.state.tasks),
+            filterId: 'All',
+            title: 'Kaikki',
           });
         },
         (error) => {
@@ -61,6 +64,7 @@ class Tracker extends React.Component {
         title: '',
       });
     } else {
+      localStorage.setItem('filterId', id);
       this.setState({ filterId: id }, () => {
         if (this.state.filterId !== 'All') {
           const cat = this.state.categories.filter(
@@ -95,7 +99,7 @@ class Tracker extends React.Component {
       });
     }
   };
-
+  // Timer callback for stop button press
   stopCallback = (start, time, active, id) => {
     let newTasks = [...this.state.tasks];
     newTasks[id - 1].time = time;
@@ -114,6 +118,7 @@ class Tracker extends React.Component {
       }),
     });
   };
+  // Timer callback for start button press
   startCallback = (start, active, id) => {
     let newTasks = [...this.state.tasks];
     newTasks[id - 1].active = active;
@@ -149,38 +154,38 @@ class Tracker extends React.Component {
       return (
         <div>
           <div className='center'>
-            <br></br>
             <h1 className='main'>Seuranta</h1>
           </div>
-          <div className='filter'>
-            <ul className='catlist'>
-              <li>
-                <button
-                  className={'catbutton'}
-                  onClick={() => this.handleFilter('All')}
-                >
-                  Kaikki
-                </button>
-              </li>
-
-              {this.state.categories.map((cat) => (
-                <li key={cat.id} style={{ marginBottom: '1em' }}>
+          <div className='title-wrapper'>
+            <div className='filter'>
+              <ul className='catlist'>
+                <li style={{ marginBottom: '0' }}>
                   <button
-                    className='catbutton'
-                    onClick={() => this.handleFilter(cat.id)}
+                    className={'catbutton'}
+                    onClick={() => this.handleFilter('All')}
                   >
-                    {[cat.type]}
+                    Kaikki
                   </button>
                 </li>
-              ))}
-            </ul>
+                {this.state.categories.map((cat) => (
+                  <li key={cat.id} style={{ marginBottom: '0' }}>
+                    <button
+                      className='catbutton'
+                      onClick={() => this.handleFilter(cat.id)}
+                    >
+                      {[cat.type]}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className='middle'>
+          <div className='middle' style={{ backgroundColor: '#e9dfdf' }}>
             <h3 style={{ marginTop: '0', textAlign: 'center' }}>
               {this.state.title}
             </h3>
             <DragDropContext onDragEnd={this.onDragEnd}>
-              <Droppable droppableId='tasks'>
+              <Droppable droppableId='tasks' direction='vertical'>
                 {(provided) => (
                   <ul
                     className='trackerul'

@@ -150,7 +150,7 @@ class TaskController extends React.Component {
             ))}
           </ul>
         </div>
-        <div className='form'>
+        <div className='form' style={{ backgroundColor: '#e9dfdf' }}>
           <form onSubmit={this.handleSave}>
             <h2 className='tasktitle'>Muokkaa tehtävää</h2>
             <label className='title'>Tehtävä</label>

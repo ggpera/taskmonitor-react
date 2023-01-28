@@ -37,6 +37,7 @@ body {
   border-radius: 50%;
   animation: spinner 1s linear infinite;
 }
+
 .loading-spinner {
   margin: auto;
   margin-top: 12.5rem;
@@ -53,14 +54,18 @@ body {
   }
 }
 .main {
-  color: #3a3153;
+  background-color: #5f43b2;
+  color: #fefdfd;
+  padding: 0.2rem;
+  margin: 0;
+  border-top: 0.5rem solid #e4e4e4;
   font-weight: lighter;
   text-decoration: underline dotted #3a3153 0.02rem;
 }
 
 .links {
   background-color: #5f43b2;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 
 .trackerul {
@@ -95,42 +100,38 @@ a {
   color: #fbfff4;
   text-decoration: none;
   font-size: 1rem;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
 }
 a:hover {
-  text-decoration: underline #29e5af 0.25rem;
+  background-color: #29e5af;
+  color: #5f43b2;
 }
 .info {
   text-align: center;
   background-color: #e4e4e4;
   padding: 1rem;
-  border-radius: 0.5rem;
   width: 50%;
   margin: auto;
-  margin-top: 1rem;
+}
+
+.title-wrapper {
+  background-color: #e4e4e4;
+  width: 50%;
+  margin: auto;
+  padding: 1rem;
 }
 .center {
-  text-align: left;
-  width: 40%;
+  text-align: center;
+  width: 50%;
   margin: auto;
-  margin-top: 1rem;
+  margin-top: 0;
 }
 .middle {
   text-align: left;
   background-color: #e4e4e4;
   padding: 1rem;
-  border-radius: 0.5rem;
   width: 50%;
   margin: auto;
-  margin-top: 1rem;
-}
-
-.filter {
-  text-align: left;
-  border-radius: 0.5rem;
-  width: 50%;
-  margin: auto;
-  margin-top: 1rem;
 }
 
 .type {
@@ -173,11 +174,9 @@ a:hover {
   background-color: #e4e4e4;
   color: #010101;
   padding: 1rem;
-  border-radius: 0.5rem;
   text-align: center;
   width: 50%;
   margin: auto;
-  margin-top: 1rem;
 }
 
 .title {
@@ -265,5 +264,5 @@ input:focus {
 }
 
 .bg2 {
-  text-align: left;
+  text-align: center;
 }

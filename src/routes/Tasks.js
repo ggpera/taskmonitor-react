@@ -67,7 +67,6 @@ class EditComponent extends React.Component {
       return (
         <div>
           <div className='center'>
-            <br></br>
             <h1 className='main'>Tehtävät</h1>
           </div>
           <TaskController

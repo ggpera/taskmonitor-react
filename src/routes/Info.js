@@ -5,7 +5,6 @@ function InfoComponent() {
   return (
     <div>
       <div className='center'>
-        <br></br>
         <h1 className='main'>Tietoa sovelluksesta</h1>
       </div>
       <div className='info'>
@@ -23,10 +22,10 @@ function InfoComponent() {
           </p>
         </div>
       </div>
-      <div className='info'>
+      <div className='info' style={{ backgroundColor: '#e9dfdf' }}>
         <img src={kis} className='App-img' alt='kissa' />
       </div>
-            <div className='info'>
+      <div className='info'>
         <p>Copyright: Petri Ranta</p>
       </div>
     </div>

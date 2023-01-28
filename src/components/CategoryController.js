@@ -72,7 +72,7 @@ class CategoryController extends React.Component {
             ))}
           </ul>
         </div>
-        <div className='form'>
+        <div className='form' style={{ backgroundColor: '#e9dfdf' }}>
           <form onSubmit={this.handleSubmit}>
             <h2 className='tasktitle'>Lisää kategoria</h2>
             <label className='title'>Kategoria</label>

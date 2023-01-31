@@ -111,6 +111,9 @@ class TaskController extends React.Component {
           id: this.state.edit.id,
           name: this.state.edit.name,
           catId: this.state.edit.catId,
+          start: 0,
+          active: false,
+          time: 0,
         }),
       });
     }

@@ -75,6 +75,9 @@ class AddTask extends React.Component {
           id: this.state.tasks.length + 1,
           name: this.state.name,
           catId: this.state.catId,
+          start: 0,
+          active: false,
+          time: 0,
         }),
       });
     }

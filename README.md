@@ -1,10 +1,10 @@
 # Task Monitor usage
 
-To run the project:
+To run the project locally:
 
-### `npx json-server -H localhost -p 3010 -w ./db.json`
+### `npm run dev`
 
-Starts the JSON server at http://localhost:3010](http://localhost:3010).
+Starts the JSON server at [http://localhost:3010](http://localhost:3010).
 
 ### `npm start`
 

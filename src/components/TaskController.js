@@ -82,7 +82,7 @@ class TaskController extends React.Component {
     this.setState({
       tasks: deleteTask,
     });
-    fetch('http://127.0.0.1:3010/tasks/' + id, {
+    fetch(`${process.env.REACT_APP_BACKEND}/tasks`  + id, {
       method: 'DELETE',
     });
   };
@@ -104,7 +104,7 @@ class TaskController extends React.Component {
         isChecked: checkArr,
         edit,
       });
-      fetch('http://127.0.0.1:3010/tasks/' + this.state.edit.id, {
+      fetch(`${process.env.REACT_APP_BACKEND}/tasks`  + this.state.edit.id, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -14,7 +14,7 @@ class Categories extends React.Component {
   }
   componentDidMount() {
     // fetch data for categories from the API
-    fetch('http://127.0.0.1:3010/categories')
+    fetch(`${process.env.REACT_APP_BACKEND}/categories` )
       .then((res) => res.json())
       .then(
         (jsonObject) => {

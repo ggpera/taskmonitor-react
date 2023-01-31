@@ -16,7 +16,7 @@ class CategoryController extends React.Component {
     this.setState({
       categories: deleteCategories,
     });
-    fetch('http://127.0.0.1:3010/categories/' + id, {
+    fetch(`${process.env.REACT_APP_BACKEND}/categories` + id, {
       method: 'DELETE',
     });
   };
@@ -43,7 +43,7 @@ class CategoryController extends React.Component {
         categories: [...this.state.categories, newState],
         type: '',
       });
-      fetch('http://127.0.0.1:3010/categories/', {
+      fetch(`${process.env.REACT_APP_BACKEND}/categories` , {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

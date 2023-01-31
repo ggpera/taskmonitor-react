@@ -15,7 +15,7 @@ class EditComponent extends React.Component {
   }
   componentDidMount() {
     // fetch data for tasks and categories from the API
-    fetch('http://127.0.0.1:3010/tasks')
+    fetch(`${process.env.REACT_APP_BACKEND}/tasks` )
       .then((res) => res.json())
       .then(
         (jsonObject) => {
@@ -31,7 +31,7 @@ class EditComponent extends React.Component {
           });
         },
       );
-    fetch('http://127.0.0.1:3010/categories')
+    fetch(`${process.env.REACT_APP_BACKEND}/categories` )
       .then((res) => res.json())
       .then(
         (jsonObject) => {

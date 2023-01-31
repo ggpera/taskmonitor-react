@@ -18,7 +18,7 @@ class Tracker extends React.Component {
 
   // Fetch data for tasks and categories from the API
   componentDidMount() {
-    fetch('http://127.0.0.1:3010/tasks')
+    fetch(`${process.env.REACT_APP_BACKEND}/tasks`)
       .then((res) => res.json())
       .then(
         (jsonObject) => {
@@ -37,7 +37,7 @@ class Tracker extends React.Component {
           });
         },
       );
-    fetch('http://127.0.0.1:3010/categories')
+    fetch(`${process.env.REACT_APP_BACKEND}/categories` )
       .then((res) => res.json())
       .then(
         (jsonObject) => {
@@ -108,7 +108,7 @@ class Tracker extends React.Component {
     this.setState({
       tasks: newTasks,
     });
-    fetch('http://127.0.0.1:3010/tasks/' + id, {
+    fetch(`${process.env.REACT_APP_BACKEND}/tasks` + id, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -126,7 +126,7 @@ class Tracker extends React.Component {
     this.setState({
       tasks: newTasks,
     });
-    fetch('http://127.0.0.1:3010/tasks/' + id, {
+    fetch(`${process.env.REACT_APP_BACKEND}/tasks` + id, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

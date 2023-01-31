@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "cross-env REACT_APP_BACKEND=http://localhost:3010 react-scripts start",
-    "build": "cross-env REACT_APP_BACKEND=https://taskmonitor.onrender.com react-scripts build",
+    "build": "cross-env REACT_APP_BACKEND=https://taskmonitor.onrender.com/api react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "npx json-server -H localhost -p 3010 -w ./db.json"

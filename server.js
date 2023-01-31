@@ -7,7 +7,7 @@ const cors = require('cors');
 
 
 server.use(middlewares);
-server.use(router);
+server.use('/api/', router);
 server.use(cors());
 
 server.listen(PORT, () => {

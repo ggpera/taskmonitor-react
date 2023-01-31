@@ -108,7 +108,7 @@ class Tracker extends React.Component {
     this.setState({
       tasks: newTasks,
     });
-    fetch(`${process.env.REACT_APP_BACKEND}/tasks` + id, {
+    fetch(`${process.env.REACT_APP_BACKEND}/tasks/` + id, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -126,7 +126,7 @@ class Tracker extends React.Component {
     this.setState({
       tasks: newTasks,
     });
-    fetch(`${process.env.REACT_APP_BACKEND}/tasks` + id, {
+    fetch(`${process.env.REACT_APP_BACKEND}/tasks/` + id, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

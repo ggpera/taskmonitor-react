@@ -68,7 +68,7 @@ class AddTask extends React.Component {
           this.props.callback(this.state.tasks);
         },
       );
-      fetch(`${process.env.REACT_APP_BACKEND}/tasks`, {
+      fetch(`${process.env.REACT_APP_BACKEND}/tasks/`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

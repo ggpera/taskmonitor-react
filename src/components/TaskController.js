@@ -82,7 +82,7 @@ class TaskController extends React.Component {
     this.setState({
       tasks: deleteTask,
     });
-    fetch(`${process.env.REACT_APP_BACKEND}/tasks`  + id, {
+    fetch(`${process.env.REACT_APP_BACKEND}/tasks/`  + id, {
       method: 'DELETE',
     });
   };
@@ -104,7 +104,7 @@ class TaskController extends React.Component {
         isChecked: checkArr,
         edit,
       });
-      fetch(`${process.env.REACT_APP_BACKEND}/tasks`  + this.state.edit.id, {
+      fetch(`${process.env.REACT_APP_BACKEND}/tasks/`  + this.state.edit.id, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -7,9 +7,9 @@
         2,
         1
       ],
-      "active": true,
-      "start": 1675161678863,
-      "time": 1740
+      "active": false,
+      "start": 0,
+      "time": 0
     },
     {
       "id": 2,
@@ -19,7 +19,7 @@
       ],
       "time": 0,
       "active": false,
-      "start": 1674926851289
+      "start": 0
     },
     {
       "id": 3,
@@ -29,7 +29,7 @@
       ],
       "time": 0,
       "active": false,
-      "start": 1674926849087
+      "start": 0
     },
     {
       "id": 4,
@@ -48,9 +48,9 @@
         3,
         4
       ],
-      "time": 0,
+      "start": 0,
       "active": false,
-      "start": 0
+      "time": 0
     }
   ],
   "categories": [

@@ -1,6 +1,6 @@
 # Task Monitor usage  
 
-## Render address  
+## Render address (might take a while to load)
 
 [https://taskmonitor.onrender.com/](https://taskmonitor.onrender.com/) 
 

@@ -266,3 +266,26 @@ input:focus {
 .bg2 {
   text-align: center;
 }
+
+/* MOBILE */
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding-bottom: 1rem;
+  }
+  .form {
+    width: 95%;
+  }
+  .info {
+    width: 95%;
+  }
+  .middle {
+    width: 95%;
+  }
+  .title-wrapper {
+    width: 95%;
+  }
+  .center {
+    width: 100%;
+  }
+}

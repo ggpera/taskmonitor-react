@@ -67,7 +67,8 @@ body {
 
 .links {
   background-color: #5f43b2;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .trackerul {
@@ -114,7 +115,7 @@ a:hover {
   padding: 1rem;
   width: 50%;
   margin: auto;
-  opacity: 90%;
+  opacity: 80%;
 }
 
 .title-wrapper {
@@ -122,7 +123,7 @@ a:hover {
   width: 50%;
   margin: auto;
   padding: 1rem;
-  opacity: 90%;
+  opacity: 80%;
 }
 .center {
   text-align: center;
@@ -136,7 +137,7 @@ a:hover {
   padding: 1rem;
   width: 50%;
   margin: auto;
-  opacity: 90%;
+  opacity: 80%;
 }
 
 .type {
@@ -182,7 +183,7 @@ a:hover {
   text-align: center;
   width: 50%;
   margin: auto;
-  opacity: 90%;
+  opacity: 80%;
 }
 
 .title {
@@ -282,7 +283,7 @@ input:focus {
     background-position: center;
   }
   .links {
-    padding: 0;
+    text-align: center;
   }
   .form {
     width: 95%;
